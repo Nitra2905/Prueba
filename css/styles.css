@@ -1,0 +1,425 @@
+/****************************************************************************************************************************************************************************/
+/*                                                                           GENERAL                                                                                         */
+/****************************************************************************************************************************************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Almendra', serif;
+    background-image: url("../images/wallpaper.jpg");
+    color:aliceblue;
+    background-size: cover;
+}
+img {max-width:fit-content;}
+a {text-decoration: none;}
+
+/*********************************************** MENÚ **********************************************************************/
+header{
+    border: 1rem black ;
+    background-image:linear-gradient(rgba(86, 5, 89, 0.726),rgb(85, 7, 158), rgb(149, 0, 255));
+}
+
+.logo{
+    border-radius: 100%;
+    border: 0.2rem solid black;
+}
+.footer{
+    margin-top: 3rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-size: x-small;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    " company info redes";
+}
+@media screen and (max-width:750px) {
+    .footer{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        font-size: x-small;
+    }
+}
+.footer_company{
+    grid-area: company;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+}
+.footer_info{
+    grid-area: info;
+}
+.footer_redes{
+    grid-area: redes;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items: center;
+}
+.footer_redes li{
+    margin: 1rem;
+}
+/****************************************************************************************************************************************************************************/
+/*                                                                           INICIO                                                                                         */
+/****************************************************************************************************************************************************************************/
+.grilla_index{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    " main main aside"
+    "main main vacio";
+}
+@media screen and (max-width:1400px) {
+    .grilla_index {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+}
+.grilla_main{
+    grid-area: main;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*ASIDE "¿Qué es esto?*/
+.grilla_aside {
+    grid-area: aside;
+    display: flex;
+    flex-flow: column wrap;
+
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+   
+    text-align: center;
+    font-size:large;
+}
+.grilla_aside h2{
+    text-decoration: underline ;
+}
+
+/*MAPA ASCELL*/
+.mapa_ascell {
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+}
+@media screen and (max-width:1400px) {
+    .mapa_ascell {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        padding:0;
+        border: none;
+    }
+}
+.mapa_ascell h2 {
+    height: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+.mapa_ascell img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/*Grilla de jugadores*/
+.efecto_cool{
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+.grilla_jugadores {
+    font-size: xx-large;
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+@media screen and (max-width:1400px) {
+    .grilla_jugadores {
+        font-size: xx-large;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+}
+.grilla_jugadores h2{
+    height: 40px;
+    text-decoration: underline;
+}
+.grilla_jugadores ul {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.grilla_jugadores ul li {
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10%;
+}
+.grilla_jugadores ul li img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 20%;
+}
+.grilla_jugadores ul li div {
+    align-items: center;
+    justify-items: baseline;
+    display: flex;
+    flex-flow: column wrap;
+    height: 7rem;
+}
+
+/*contacto*/
+.contacto {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+    justify-content: center;
+    text-align: center;
+}
+@media screen and (max-width:1400px) {
+    .contacto {
+        width: 100%;
+        margin: 0;
+        padding:0;
+    }
+}
+.contacto h2 {
+    text-decoration: underline;
+}
+
+/****************************************************************************************************************************************************************************/
+/*                                                                       Página de personajes                                                                               */
+/****************************************************************************************************************************************************************************/
+/*Grilla de personajes*/
+.grilla_personajes {
+    display: flex;
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+}
+.grilla_personajes legend {
+    font-size: xx-large;
+}
+.grilla_personajes ul {
+   display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.grilla_personajes ul li {
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10%;
+}
+.grilla_personajes ul li img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 20%;
+}
+
+/****************************************************************************************************************************************************************************/
+/*                                                                       Página de ciudades                                                                               */
+/****************************************************************************************************************************************************************************/
+/*Grilla de ciudades*/
+.grilla_ciudades {
+    display: flex;
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+}
+.grilla_ciudades legend {
+    font-size: xx-large;
+}
+.grilla_ciudades ul {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.grilla_ciudades ul li {
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem;
+}
+.grilla_ciudades ul li img {
+    width: 20rem;
+    height: 20rem;
+}
+
+/****************************************************************************************************************************************************************************/
+/*                                                                       Página de Diario                                                                               */
+/****************************************************************************************************************************************************************************/
+/* Descripcion del diario */
+.grilla_diario {
+    font-size:medium;
+    display: flex;
+    flex-flow: column;
+    margin: 4rem 10rem 4rem 10rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+    justify-content: center;
+    align-items: center;
+}
+.grilla_diario legend {
+    font-size: xx-large;
+}
+.grilla_diario p {
+    text-align: center;
+}
+.diario {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#portadaDiario {
+    background-image: url("../images/diario-portada.jpg");
+    background-size:contain;
+    width: 1446px;
+    height: 2048px;
+}
+.paginaDiario {
+    margin: 3rem;
+    background-image:url("../images/diario-pagina.jpg");
+    background-size:contain;
+    width: 1446px;
+    height: 2048px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paginaDiario__retrato {
+    border-radius: 100%;
+    margin: 18rem 0rem 0rem 5rem;
+    width: 15rem;
+    height: 15rem;
+    border: 0.3rem;
+    border-color: black;
+}
+.paginaDiario__capitulo {
+    margin-top: 7rem;
+    font-size: xx-large;
+    color: black;
+}
+.paginaDiario__sesion {
+    margin-top: 1rem;
+    font-size: x-large;
+    color: black;
+}
+.paginaDiario__nombre { 
+    margin-top: 5rem;
+    font-size: x-large;
+    color: black;
+    margin-left: 8rem;
+}
+.paginaDiario__texto {
+    margin: 5rem 20rem 0rem 20rem;
+    color: black;
+    font-size: xx-large;
+    height: 50rem;
+    overflow-wrap: normal;
+}
+/*HAY VARIAS FUENTES PORQUE LA IDEA ES QUE A LOS JUGADORES PUEDAN ESCRIBIR EN EL DIARIO INTERPRETANDO A SUS PERSJONAJES Y QUE CADA UNO TENGA SU PRIPIA CALIGRAFIA, 
+SOLO AHI SE  APLICARÍAN VARIAS FUENTES, NO SE SI SERIA UNA MALA PRACTICA HACER ESO*/
+
+/*
+.caligrafia_mael{   font-family: 'Freehand', cursive;}
+.caligrafia_almar{  font-family: 'Freehand', cursive;}
+.caligrafia_peaks{    font-family: 'Freehand', cursive;}
+.caligrafia_morgan{    font-family: 'Freehand', cursive;}
+.caligrafia_kairon{    font-family: 'Freehand', cursive;}
+.caligrafia_mocco {    font-family: 'Freehand', cursive;}
+*/
+
+/****************************************************************************************************************************************************************************/
+/*                                                                       Página de Contacto                                                                               */
+/****************************************************************************************************************************************************************************/
+/*Grilla de contacto*/
+.grilla_contacto {
+    font-size:medium;
+    display: flex;
+    flex-flow: column;
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+    justify-content: space-between;
+    align-items: center;
+}
+.grilla_contacto legend {
+    font-size: x-large;
+}
+.grilla_ubicacion {
+    font-size:medium;
+    display: flex;
+    flex-flow: column;
+    margin: 3rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/****************************************************************************************************************************************************************************/
+/*                                                                       Página de Como jugar                                                                         */
+/****************************************************************************************************************************************************************************/
+
+/* Descripcion del diario */
+.grilla_como-jugar {
+    font-size:medium;
+    display: flex;
+    flex-flow: column;
+    margin: 10rem;
+    padding: 1rem;
+    border: aliceblue;
+    border-style: dotted;
+    justify-content: center;
+    align-items: center;
+}
+.grilla_como-jugar legend {
+    font-size: xx-large;
+}
+.link-manuales {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
