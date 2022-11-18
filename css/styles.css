@@ -315,9 +315,9 @@ header{
 }
 @media screen and (max-width:1400px){
     .grilla_diario {
-
         margin: 4rem 0rem 4rem 0rem;
         padding: 0rem;
+        border: none;
         justify-content: center;
         align-items: center;
     }
