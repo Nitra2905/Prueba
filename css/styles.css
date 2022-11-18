@@ -313,8 +313,14 @@ header{
     justify-content: center;
     align-items: center;
 }
-.grilla_diario legend {
-    font-size: xx-large;
+@media screen and (max-width:1400px){
+    .grilla_diario {
+
+        margin: 4rem 0rem 4rem 0rem;
+        padding: 0rem;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .grilla_diario p {
     text-align: center;
