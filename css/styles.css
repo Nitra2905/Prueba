@@ -111,6 +111,7 @@ header{
 }
 .grilla_aside h2{
     text-decoration: underline ;
+    height: 3rem;
 }
 
 /*MAPA ASCELL*/
@@ -165,10 +166,16 @@ header{
         justify-content: center;
         justify-items: center;
     }
+    .grilla_jugadores ul {
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
 }
 .grilla_jugadores h2{
     height: 40px;
     text-decoration: underline;
+    height: 3rem;
 }
 .grilla_jugadores ul {
     display: flex;
@@ -190,11 +197,15 @@ header{
     border-radius: 20%;
 }
 .grilla_jugadores ul li div {
-    align-items: center;
-    justify-items: baseline;
     display: flex;
     flex-flow: column wrap;
-    height: 7rem;
+    align-content: center;
+    height: 8rem;
+    justify-content: center;
+    margin: 0;
+}
+.grilla_jugadores ul li div h3 {
+    overflow: hidden;
 }
 
 /*contacto*/
@@ -217,6 +228,7 @@ header{
 }
 .contacto h2 {
     text-decoration: underline;
+    height: 3rem;
 }
 
 /****************************************************************************************************************************************************************************/
@@ -230,9 +242,7 @@ header{
     border: aliceblue;
     border-style: dotted;
 }
-.grilla_personajes legend {
-    font-size: xx-large;
-}
+
 .grilla_personajes ul {
    display: flex;
     flex-flow: row wrap;
@@ -249,7 +259,13 @@ header{
     height: 20rem;
     border-radius: 20%;
 }
-
+.grilla_personajes ul li div {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-items: center;
+    align-items: center;
+}
 /****************************************************************************************************************************************************************************/
 /*                                                                       Página de ciudades                                                                               */
 /****************************************************************************************************************************************************************************/
