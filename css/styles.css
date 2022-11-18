@@ -184,6 +184,7 @@ header{
     align-items: center;
     justify-content: center;
     justify-items: center;
+    width: auto;
 }
 .grilla_jugadores ul li {
     background-color: black;
@@ -229,6 +230,7 @@ header{
 .contacto h2 {
     text-decoration: underline;
     height: 3rem;
+    overflow: hidden;
 }
 
 /****************************************************************************************************************************************************************************/
